@@ -21,7 +21,7 @@ Se realizará en un entorno de prueba para depurar su funcionamiento y acto segu
 
 - En el entorno de prueba se realizará en una máquina.
 
-	- Máquina 1 (Anakin): Tendrá instalado todos los servicios.
+	- Máquina 1 (Anakin "172.22.200.111"): Tendrá instalado todos los servicios.
 
 - En el entorno de producción se realizara en dos máquinas, en las cuales los servicios se dividiran de la siguiente forma:
 
