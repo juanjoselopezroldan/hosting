@@ -12,7 +12,7 @@ Committeros: Manuel Franco, Maria Romero y Juan Jose Lopez
 - [ ] Creación de Aplicación Web.
 - [ ] Cuotas con volúmenes lógicos.
 - [ ] Gestor Grafico FTP net2ftp.
-- [ ] Estadísticas Web con webalizer.
+- [ ] Estadísticas Web con awstat.
 - [ ] Subir ficheros mediante repositorio gitHub.
 - [ ] Creación de script de Alta/Baja de usuario y cambio de contraseña.
 
