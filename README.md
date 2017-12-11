@@ -1,12 +1,20 @@
 # hosting
-Procedimientos para realizar la creación de un hosting con servicio web, ftp y base de datos.\n
+Procedimientos para realizar la creación de un hosting con servicio web, ftp y base de datos.
 
 Committeros: Manuel Franco, Maria Romero y Juan Jose Lopez
 
-- Instalacion de Servidor Web.
-- Instalacion de Servidor FTP.
-- Instalacion de Servidor PostgreSQL.
-- Instalacion de Servidor DNS.
-- Autenticacion con PostgreSQL.
-- Subir ficheros mediante repositorio gitHub.
-- Creacion de script de Alta/Baja de usuario y cambio de contraseña.
+- Instalación de Servidor Web ().
+- Instalación de Servidor FTP ().
+- Instalación de Servidor PostgreSQL ().
+- Instalación de Servidor DNS ().
+- Autenticación con PostgreSQL ().
+- Instalación de PHPgADmin ().
+- Creación de Aplicación Web ().
+- Cuotas con volúmenes lógicos ().
+- Gestor Grafico FTP net2ftp ().
+- Estadísticas Web con webalizer ().
+- Subir ficheros mediante repositorio gitHub ().
+- Creación de script de Alta/Baja de usuario y cambio de contraseña ().
+
+
+Se realizará en un entorno de prueba para depurar su funcionamiento y acto seguido se trasladará a un entorno de producción.
