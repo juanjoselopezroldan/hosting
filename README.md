@@ -38,6 +38,13 @@ Una vez tengamos instalado Apache2, vamos a configurar la automatización de cre
 
 Tendremos un proceso que estará mirando a la carpeta donde se subirán los archivos por FTP y cuando tengamos una nueva carpeta con el nombre de usuario se creará automáticamente.
 
+# FTP
+## Instalación
+`apt-get install proftpd`
+
+## Configuración
+La configuracion de proftpd se basa en la modificacion del fichero que se encuentra en /etc/proftpd/proftpd.conf 
+
 # mariaDB
 ## Instalación
 `apt install mariadb-server`
@@ -63,6 +70,53 @@ MariaDB [users]> create table testusers
     -> email char(70)
     -> );
 MariaDB [users]> insert into testusers values('maria.romero', '****', 'm.romeroangulo@gmail.com')`
+~~~
+
+# DNS Bind9
+## Instalación
+`apt-get install bind9`
+
+## Configuración
+La configuración de Bind9 se realiza de la siguiente forma
+
+- Primero se realiza la configuracion de las zonas y para ello la tendremos que indicar en el fichero llamado named.conf.local que se encuentra en /etc/bind.
+~~~
+	nano /etc/bind/named.conf.local 
+	
+	//
+	// Do any local configuration here
+	//
+
+	// Consider adding the 1918 zones here, if they are not used in your
+	// organization
+	//include "/etc/bind/zones.rfc1918";
+
+	zone "elultimohosting.com" {
+
+	type master;
+
+	file "/var/cache/bind/db.elultimohosting.com";
+
+	};
+
+
+	zone "22.172.in-addr.arpa" {
+
+	type master;
+
+	file "/var/cache/bind/db.22.172";
+
+	};
+~~~
+
+- Acto seguido tendremos que modificar en el mismo directorio el fichero llamado named.conf.options y en ese fichero tendremos que generar las lineas forwarders y en esas lineas tendremos que indicar la dirección ip de nuestro proveedor DNS para que en el caso en el que tenga que hacer una petición a un nombre que no tenga nuestro DNS no tenga que dirigirse a los RootServer si no que le pregunte a este servidor.
+~~~
+	nano /etc/bind/named.conf.options
+	
+	forwarders {
+        	        192.168.102.2;
+        	};
+
 ~~~
 
 # phpMyAdmin
