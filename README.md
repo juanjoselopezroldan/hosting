@@ -3,7 +3,7 @@ Procedimientos para realizar la creación de un hosting con servicio web, ftp y 
 
 Committeros: Manuel Franco, Maria Romero y Juan Jose Lopez
 
-- [ ] Instalación de Servidor Web.
+- [x] Instalación de Servidor Web.
 - [ ] Instalación de Servidor FTP.
 - [ ] Instalación de Servidor MariaDB.
 - [ ] Instalación de Servidor DNS.
@@ -24,5 +24,8 @@ Se realizará en un entorno de prueba para depurar su funcionamiento y acto segu
 	- Máquina 1 (Anakin "172.22.200.111"): Tendrá instalado todos los servicios.
 
 - En el entorno de producción se realizara en dos máquinas, en las cuales los servicios se dividiran de la siguiente forma:
+
+	- Máquina Obi-Wan: Tendrá los servicios de cara al exterior como el servidor web o el ftp.
+	- Máquina Yoda: Tendrá la base de datos y el servidor DNS en la red interna, está no será accesible desde el exterior.
 
 
