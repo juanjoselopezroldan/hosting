@@ -5,7 +5,7 @@ Committeros: Manuel Franco, Maria Romero y Juan Jose Lopez
 
 - [x] Instalación de Servidor Web.
 - [x] Instalación de Servidor FTP.
-- [ ] Instalación de Servidor MariaDB.
+- [x] Instalación de Servidor MariaDB.
 - [x] Instalación de Servidor DNS.
 - [ ] Autenticación con MariaDB.
 - [ ] Instalación de PHPmyAdmin.
