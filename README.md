@@ -8,7 +8,7 @@ Committeros: Manuel Franco, Maria Romero y Juan Jose Lopez
 - [x] Instalación de Servidor MariaDB.
 - [x] Instalación de Servidor DNS.
 - [ ] Autenticación con MariaDB.
-- [ ] Instalación de PHPmyAdmin.
+- [x] Instalación de PHPmyAdmin.
 - [ ] Creación de Aplicación Web.
 - [ ] Cuotas con volúmenes lógicos.
 - [ ] Gestor Grafico FTP net2ftp.
