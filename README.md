@@ -25,7 +25,7 @@ Se realizará en un entorno de prueba para depurar su funcionamiento y acto segu
 
 - En el entorno de producción se realizara en dos máquinas, en las cuales los servicios se dividiran de la siguiente forma:
 
-	- Máquina Obi-Wan: Tendrá los servicios de cara al exterior como el servidor web o el ftp.
-	- Máquina Yoda: Tendrá la base de datos y el servidor DNS en la red interna, está no será accesible desde el exterior.
+	- Máquina Obi-Wan: Tendrá los servicios de cara al exterior como el servidor web, el ftp o el servidor DNS.
+	- Máquina Yoda: Tendrá la base de datos en la red interna, está no será accesible desde el exterior.
 
 
