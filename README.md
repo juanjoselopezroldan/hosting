@@ -42,7 +42,7 @@ Tendremos un proceso que estará mirando a la carpeta donde se subirán los arch
 ## Instalación
 `apt install mariadb-server`
 
-##Configuración
+## Configuración
 Para crear un usuario y no tener que usar siempre root, nos conectamos con este usuario y creamos el nuevo:
 
 ~~~
@@ -65,13 +65,13 @@ MariaDB [users]> create table testusers
 MariaDB [users]> insert into testusers values('maria.romero', '****', 'm.romeroangulo@gmail.com')`
 ~~~
 
-#phpMyAdmin
+# phpMyAdmin
 ## Instalación
 `apt install phpmyadmin`
 
 Durante la instalación nos da la opción de instalarlo en el momento o luego manualmente. La primera opción es la más cómoda si ya tenemos configurado todo lo de mariaDB. Nos pide una clave para el usuario administrador de phoMyAdmin y si queremos que vaya sobre apache o httpd.
 
-##Configuración
+## Configuración
 Lo primero es deshabilitar el sitio por defecto que trae apache2:
 `a2dissite 000-default`
 
