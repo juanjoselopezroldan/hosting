@@ -37,3 +37,25 @@ Una vez tengamos instalado Apache2, vamos a configurar la automatización de cre
 
 
 Tendremos un proceso que estará mirando a la carpeta donde se subirán los archivos por FTP y cuando tengamos una nueva carpeta con el nombre de usuario se creará automáticamente.
+
+# mariaDB
+## Instalación
+`apt install mariadb-server`
+
+Para crear un usuario y no tener que usar siempre root, nos conectamos con este usuario y creamos el nuevo:
+
+`mysql -u root -p
+rant all privileges on *.* to 'auth'@'localhost' identified by '*****' with grant option;`
+
+Lo siguiente es crear la base de datos, las tablas e insertar datos:
+`mysql -u auth -p
+MariaDB [(none)]> create database users
+MariaDB [(none)]> use users
+MariaDB [users]> create table testusers
+    -> (
+    -> username char(20) NOT NULL,
+    -> password char(70) NOT NULL,
+    -> email char(70)
+    -> );
+MariaDB [users]> insert into testusers values('maria.romero', '****', 'm.romeroangulo@gmail.com')`
+
