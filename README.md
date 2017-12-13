@@ -4,9 +4,9 @@ Procedimientos para realizar la creación de un hosting con servicio web, ftp y 
 Committeros: Manuel Franco, Maria Romero y Juan Jose Lopez
 
 - [x] Instalación de Servidor Web.
-- [x] Instalación de Servidor FTP.
-- [x] Instalación de Servidor MariaDB.
-- [x] Instalación de Servidor DNS.
+- [ ] Instalación de Servidor FTP.
+- [ ] Instalación de Servidor MariaDB.
+- [ ] Instalación de Servidor DNS.
 - [ ] Autenticación con MariaDB.
 - [ ] Instalación de PHPmyAdmin.
 - [ ] Creación de Aplicación Web.
@@ -29,3 +29,11 @@ Se realizará en un entorno de prueba para depurar su funcionamiento y acto segu
 	- Máquina Yoda: Tendrá la base de datos en la red interna, está no será accesible desde el exterior.
 
 
+#Instalación del servidor Apache2:
+
+`apt install apache2`
+
+Una vez tengamos instalado Apache2, vamos a configurar la automatización de creación de virtualhost en apache2, esto se hará de la siguiente manera:
+
+
+Tendremos un proceso que estará mirando a la carpeta donde se subirán los archivos por FTP y cuando tengamos una nueva carpeta con el nombre de usuario se creará automáticamente.
