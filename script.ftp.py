@@ -30,8 +30,3 @@ else:
 
 conectar.commit()
 conectar.close()
-
-print base
-print usuario
-print clave
-print clavecifrada
