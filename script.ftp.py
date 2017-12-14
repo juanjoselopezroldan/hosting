@@ -16,3 +16,8 @@ directorio='/srv/ftp/'+usuario
 
 conectar= mariadb.connect("localhost",usuadmin,passadmin,base)
 cursor= conectar.cursor()
+
+if opcion == '-a':
+
+elif opcion == '-b':
+	
