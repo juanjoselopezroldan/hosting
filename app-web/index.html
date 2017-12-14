@@ -41,8 +41,8 @@
 <header class="header" id="header"><!--header-start-->
 	<div class="container">
     	<figure class="logo animated fadeInDown delay-07s">
-        	<a href="#"><img src="img/logo.png" alt=""></a>	
-        </figure>	
+        	<a href="#"><img src="img/logo.png" alt=""></a>
+        </figure>
         <h1 class="animated fadeInDown delay-07s">The Last Hosting</h1>
         <ul class="we-create animated fadeInUp delay-1s">
         	<li>El Ultimo Hosting</li>
@@ -60,7 +60,7 @@
             <li><a href="#service">¿Quienes Somos?</a></li>
             <li class="small-logo"><a href="#header"><img src="img/small-logo.png" alt=""></a></li>
             <li><a href="#team">¿Que Ofrecemos?</a></li>
-            <li><a href="#client">Ayuda</a></li>
+            <li><a href="#client">Iniciar Sesión</a></li>
         </ul>
         <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
     </div>
@@ -106,7 +106,7 @@
 
 
 
-<section class="main-section alabaster"><!--main-section alabaster-start-->
+<section class="main-section alabaster" id="team"><!--main-section alabaster-start-->
 	<div class="container">
     	<div class="row">
 			<figure class="col-lg-5 col-sm-4 wow fadeInLeft">
@@ -118,11 +118,11 @@
             	<div class="featured-box">
                 	<div class="featured-box-col1 wow fadeInRight delay-02s">
                     	<i class="fa-magic"></i>
-                    </div>	
+                    </div>
                 	<div class="featured-box-col2 wow fadeInRight delay-02s">
                         <h3>magic of theme development</h3>
                         <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
-                    </div>    
+                    </div>
                 </div>
               </div>
                 <a class="Learn-More" href="#">Learn More</a>
@@ -130,27 +130,6 @@
         </div>
 	</div>
 </section><!--main-section alabaster-end-->
-
-<section class="main-section" id="team"><!--main-section-start-->
-	<div class="container">
-    	<h2>¿Que Ofrecemos?</h2>
-    	<h6>We offer exceptional service with complimentary hugs.</h6>
-        <div class="row">
-        	<div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
-            	<div class="service-list">
-                	<div class="service-list-col1">
-                    	<i class="fa-paw"></i>
-                    </div>
-                	<div class="service-list-col2">
-                        <h3>branding &amp; identity</h3>
-                        <p>Proin iaculis purus digni consequat sem digni ssim. Donec entum digni ssim.</p>
-                    </div>
-                </div>
-              </div>
-            </div>
-        </div>
-	</div>
-</section><!--main-section-end-->
 
 <section class="main-section" id="client"><!--main-section-start-->
 	<div class="container">
@@ -178,8 +157,8 @@
         <div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt=""></a></div>
         <span class="copyright">Copyright © 2015 | <a href="http://bootstraptaste.com/">Bootstrap Themes</a> by BootstrapTaste</span>
     </div>
-    <!-- 
-        All links in the footer should remain intact. 
+    <!--
+        All links in the footer should remain intact.
         Licenseing information is available at: http://bootstraptaste.com/license/
         You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Knight
     -->
@@ -190,10 +169,10 @@
         $('#test').scrollToFixed();
         $('.res-nav_click').click(function(){
             $('.main-nav').slideToggle();
-            return false    
-            
+            return false
+
         });
-        
+
     });
 </script>
 
@@ -205,16 +184,16 @@
       }
     );
     wow.init();
- 
+
   </script>
 
 
 <script type="text/javascript">
 	$(window).load(function(){
-		
+
 		$('.main-nav li a').bind('click',function(event){
 			var $anchor = $(this);
-			
+
 			$('html, body').stop().animate({
 				scrollTop: $($anchor.attr('href')).offset().top - 102
 			}, 1500,'easeInOutExpo');
@@ -232,14 +211,14 @@
 <script type="text/javascript">
 
 $(window).load(function(){
-  
-  
+
+
   var $container = $('.portfolioContainer'),
       $body = $('body'),
       colW = 375,
       columns = null;
 
-  
+
   $container.isotope({
     // disable window resizing
     resizable: true,
@@ -247,7 +226,7 @@ $(window).load(function(){
       columnWidth: colW
     }
   });
-  
+
   $(window).smartresize(function(){
     // check if columns has changed
     var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
@@ -258,20 +237,20 @@ $(window).load(function(){
       $container.width( columns * colW )
         .isotope('reLayout');
     }
-    
+
   }).smartresize(); // trigger resize to set container width
   $('.portfolioFilter a').click(function(){
         $('.portfolioFilter .current').removeClass('current');
         $(this).addClass('current');
- 
+
         var selector = $(this).attr('data-filter');
         $container.isotope({
-			
+
             filter: selector,
          });
          return false;
     });
-  
+
 });
 
 </script>
