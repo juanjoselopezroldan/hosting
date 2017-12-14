@@ -21,4 +21,4 @@ cursor= conectar.cursor()
 if opcion == '-a':
 	cursor.execute("INSERT INTO usuario (nombre, clave, id, directorio) VALUES (\'" + nombre + "\',\'" + clavecifrada + "\'," + str(uid) + ",\'" + directorio +"\')")
 elif opcion == '-b':
-	cursor.execute("INSERT INTO usuario (nombre, clave, id, directorio) VALUES (\'" + nombre + "\',\'" + clavecifrada + "\'," + str(uid) + ",\'" + directorio +"\')")
+	cursor.execute("DELETE FROM usuario WHERE nombre = '%s'"%usuario)
