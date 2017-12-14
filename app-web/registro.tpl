@@ -21,6 +21,7 @@
                 <br>
                 <input type="submit" value="registrar">
             </form>
+
          </div>
        </div>
   </div>
