@@ -2,14 +2,13 @@
 import MySQLdb as mariadb
 import sys
 
-base='PREGUNTAR'
+base=sys.argv[1]
 usuario=sys.argv[1]
 clave=sys.argv[2]
 
-usuadmin='PREGUNTAR'
-passadmin='PREGUNTAR'
+usuadmin='root'
+passadmin='root'
 
 directorio='/srv/ftp/'+usuario
 
-conectar= mariadb.connect("localhost",usuadmin,passadmin,base)
 
