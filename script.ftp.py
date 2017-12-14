@@ -2,9 +2,10 @@
 import MySQLdb as mariadb
 import sys, commands
 
+opcion=sys.argv[1]
 base='usuarios'
-usuario=sys.argv[1]
-clave=sys.argv[2]
+usuario=sys.argv[2]
+clave=sys.argv[3]
 clavecifrada= commands.getoutput("echo "+clave+" | base64")
 
 
@@ -13,5 +14,5 @@ passadmin='root'
 
 directorio='/srv/ftp/'+usuario
 
-#conectar= mariadb.connect("localhost",usuadmin,passadmin,base)
-
+conectar= mariadb.connect("localhost",usuadmin,passadmin,base)
+cursor= conectar.cursor()
