@@ -25,6 +25,7 @@ if opcion == '-a':
 
 elif opcion == '-b':
 	cursor.execute("DELETE FROM usuario WHERE nombre = '%s'"%usuario)
+	
 else:
 	print 'La opcion indicada es erronea'
 
