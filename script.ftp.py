@@ -19,6 +19,6 @@ conectar= mariadb.connect("localhost",usuadmin,passadmin,base)
 cursor= conectar.cursor()
 
 if opcion == '-a':
-	cursor.execute("INSERT INTO usuario (nombre, clave, id, directorio) VALUES (\'" + nombre + "\',\'" + clavecifrada + "\'," + str(uid) + ",\'" + directorio +"\')")
+	cursor.execute("INSERT INTO usuario (nombre, clave, id, directorio) VALUES (\'" + usuario + "\',\'" + clavecifrada + "\'," + str(uid) + ",\'" + directorio +"\')")
 elif opcion == '-b':
 	cursor.execute("DELETE FROM usuario WHERE nombre = '%s'"%usuario)
