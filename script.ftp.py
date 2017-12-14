@@ -18,13 +18,13 @@ directorio='/srv/ftp/'+usuario
 conectar= mariadb.connect("localhost",usuadmin,passadmin,base)
 cursor= conectar.cursor()
 
-try:
+
 if opcion == '-a':
-	cursor.execute("INSERT INTO usuario (nombre, clave, id, directorio) VALUES (%s,%s,%s,%s)",(usuario,clave,uid,directorio))
+	cursor.execute("INSERT INTO usuario (nombre, clave, id, directorio) VALUES (%s,%s,%s,%s)",(usuario,clavecifrada,uid,directorio))
 elif opcion == '-b':
 	cursor.execute("DELETE FROM usuario WHERE nombre = '%s'"%usuario)
-except mariadb.Error as error:
-	print ("Error: {}".format(error))
+else:
+	print 'La opcion indicada es erronea'
 
 conectar.commit()
 conectar.close()
