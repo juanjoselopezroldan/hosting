@@ -1,11 +1,12 @@
 #-*-coding: utf-8 -*-
 import MySQLdb as mariadb
-import sys, os
+import sys, commands
 
 base='usuarios'
 usuario=sys.argv[1]
 clave=sys.argv[2]
-clavecifrada=os.system("echo "+clave+" | base64")
+clavecifrada= commands.getoutput("echo "+clave+" | base64")
+
 
 usuadmin='root'
 passadmin='root'
