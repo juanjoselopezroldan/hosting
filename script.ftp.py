@@ -15,7 +15,7 @@ passadmin='root'
 
 directorio='/srv/ftp/'+usuario
 
-conectar= mariadb.connect("localhost",user=usuadmin,password=passadmin,database=base)
+conectar= mariadb.connect("localhost",usuadmin,passadmin,base)
 cursor= conectar.cursor()
 
 if opcion == '-a':
