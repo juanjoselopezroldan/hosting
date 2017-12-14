@@ -5,7 +5,6 @@ import sys, commands
 opcion=sys.argv[1]
 usuario=sys.argv[2]
 
-
 base='users'
 usuadmin='root'
 passadmin='root'
@@ -25,9 +24,11 @@ if opcion == '-a':
 
 elif opcion == '-b':
 	cursor.execute("DELETE FROM usuario WHERE nombre = '%s'"%usuario)
-	
+
 else:
 	print 'La opcion indicada es erronea'
 
 conectar.commit()
 conectar.close()
+
+print 'Ejecución terminada correctamente'
