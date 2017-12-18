@@ -9,11 +9,11 @@
 
             <form action="/registro" method="post" style="float: left">
                 <label>Nombre Completo: </label><input type="text" name="usuario" required/><br>
-                <label>N. sitio Web: </label><input type="text" name="usuario" required/><br>
-                <label>Nombre Usuario : </label><input type="text" name="usuario" required/><br>
+                <label>N. sitio Web: </label><input type="text" name="sitio" required/><br>
+                <label>Nombre Usuario : </label><input type="text" name="nombre" required/><br>
                 <label>Contraseña: </label> <input type="password" name="clave" required/><br>
                 <label>Definir lugar donde se va a almacenar los datos del hosting: </label>
-                <select class="" name="sitio">
+                <select class="" name="tipo">
                   <option selected value="0"> Elige una opción </option>
                   <option value="1">FTP</option>
                   <option value="3">GitHub</option>
