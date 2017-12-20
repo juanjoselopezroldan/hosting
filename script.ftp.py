@@ -1,6 +1,6 @@
 #-*-coding: utf-8 -*-
 import MySQLdb as mariadb
-import sys, commands
+import sys, os, commands
 
 opcion=sys.argv[1]
 usuario=sys.argv[2]
@@ -13,6 +13,7 @@ directorio='/srv/ftp/'+usuario
 
 conectar= mariadb.connect("localhost",usuadmin,passadmin,base)
 cursor= conectar.cursor()
+
 
 
 if opcion == '-a':
