@@ -33,3 +33,4 @@ conectar.close()
 
 mariadb -u root -p'root' -e 'create user '+usuario+'@"%" identified by '+clave+'';'
 mariadb -u root -p'root' -e 'create database '+usuario+';'
+mariadb -u root -p'root' -e 'GRANT ALL PRIVILEGES ON '+usuario+'.* TO '+usuario+'@"%";'
