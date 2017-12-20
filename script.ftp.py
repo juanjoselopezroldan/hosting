@@ -15,7 +15,7 @@ conectar= mariadb.connect("localhost",usuadmin,passadmin,base)
 cursor= conectar.cursor()
 
 os.system('mkdir '+directorio+'')
-os.system('chown ftp:nogroup'+directorio+' -R')
+os.system('chown ftp:nogroup'+directorio+'')
 
 if opcion == '-a':
 	clave=sys.argv[3]
