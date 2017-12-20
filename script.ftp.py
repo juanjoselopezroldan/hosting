@@ -36,4 +36,4 @@ clave=sys.argv[3]
 
 print "mariadb -u root -p'root' -e 'create user '+usuario+'@"'""%"'" identified by '+clave+'';'"
 print "mariadb -u root -p'root' -e 'create database '+usuario+';'"
-print "mariadb -u root -p'root' -e 'GRANT ALL PRIVILEGES ON '+usuario+'.* TO '+usuario+'@"%";'"
+print "mariadb -u root -p'root' -e 'GRANT ALL PRIVILEGES ON '+usuario+'.* TO '+usuario+'@"'"%"'";'"
