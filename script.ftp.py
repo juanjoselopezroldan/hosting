@@ -33,7 +33,7 @@ conectar.commit()
 conectar.close()
 
 clave=sys.argv[3]
-
+coma='"'
 os.system("mariadb -u root -p'root' -e 'create user '"+usuario+"'@"'"%"'" identified by "+coma+""+clave+""+coma+";'")
 os.system("mariadb -u root -p'root' -e 'create database '"+usuario+"';'")
 os.system("mariadb -u root -p'root' -e 'GRANT ALL PRIVILEGES ON '"+usuario+"'.* TO '"+usuario+"'@"'"%"'";'")
