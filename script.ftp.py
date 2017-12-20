@@ -2,7 +2,7 @@
 import MySQLdb as mariadb
 import sys, os, commands
 
-#opcion=sys.argv[1]
+opcion=sys.argv[1]
 #usuario=sys.argv[2]
 
 #base='users'
