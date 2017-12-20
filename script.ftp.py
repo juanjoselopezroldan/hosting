@@ -18,7 +18,7 @@ opcion=sys.argv[1]
 #os.system('chown ftp:nogroup '+directorio+'')
 
 if opcion == '-a':
-	clave=sys.argv[3]
+#	clave=sys.argv[3]
 	uid=0
 	uid=commands.getoutput("mariadb -u root -p'root' -e 'select max(id) from users.usuario;' | tr -s " " | tail -1")
 	uid=int(uid)+1
