@@ -19,7 +19,7 @@ if opcion == '-a':
 	clave=sys.argv[3]
 	uid=sys.argv[4]
 	clavecifrada= commands.getoutput("echo "+clave+" | base64")
-	
+
 	cursor.execute("INSERT INTO usuario (nombre, clave, id, directorio) VALUES (%s,%s,%s,%s)",(usuario,clavecifrada,uid,directorio))
 
 elif opcion == '-b':
@@ -31,4 +31,5 @@ else:
 conectar.commit()
 conectar.close()
 
-print 'Ejecución terminada correctamente'
+mariadb -u root -p'root' -e 'create user '+usuario+'@"%" identified by '+clave+'';'
+mariadb -u root -p'root' -e 'create database '+usuario+';'
