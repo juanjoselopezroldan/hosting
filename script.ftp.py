@@ -34,6 +34,6 @@ conectar.close()
 
 clave=sys.argv[3]
 
-mariadb -u root -p'root' -e 'create user '+usuario+'@"%" identified by '+clave+'';'
-mariadb -u root -p'root' -e 'create database '+usuario+';'
-mariadb -u root -p'root' -e 'GRANT ALL PRIVILEGES ON '+usuario+'.* TO '+usuario+'@"%";'
+os.system('mariadb -u root -p'"root"' -e '"create user '"+usuario+"'@"'%'" identified by '"+clave+"';"'')
+os.system('mariadb -u root -p'"root"' -e '"create database '"+usuario+"';"'')
+os.system('mariadb -u root -p'"root"' -e '"GRANT ALL PRIVILEGES ON '"+usuario+"'.* TO '"+usuario+"'@'%';"'')
