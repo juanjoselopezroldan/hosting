@@ -22,6 +22,7 @@ if opcion == '-a':
 	uid=0
 	uid=get.commands("mariadb -u root -p'root' -e 'select max(id) from users.usuario;'")
 	uid=int(uid)+1
+	
 	clavecifrada= commands.getoutput("echo "+clave+" | base64")
 
 	cursor.execute("INSERT INTO usuario (nombre, clave, id, directorio) VALUES (%s,%s,%s,%s)",(usuario,clavecifrada,uid,directorio))
