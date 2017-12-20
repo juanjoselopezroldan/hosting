@@ -14,7 +14,7 @@ directorio='/srv/ftp/'+usuario
 conectar= mariadb.connect("localhost",usuadmin,passadmin,base)
 cursor= conectar.cursor()
 
-
+os.system('mkdir '+directorio+'')
 
 if opcion == '-a':
 	clave=sys.argv[3]
