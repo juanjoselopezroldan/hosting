@@ -36,5 +36,8 @@ virtualhost=["<VirtualHost *:80> \n"
 "# vim: syntax=apache ts=4 sw=4 sts=4 sr noet \n"]
 
 if opcion == '-a':
+    os.system("mkdir /var/www"+nombreweb)
+    os.system("chown www-data. /var/www/"+nombreweb)
+
 
 elif opcion == '-b':
