@@ -2,6 +2,7 @@
 import sys, os
 
 opcion=sys.argv[1]
+nombreweb=sys.argv[2]
 
 virtualhost=["<VirtualHost *:80> \n"
 	"# The ServerName directive sets the request scheme, hostname and port that \n"
@@ -11,10 +12,10 @@ virtualhost=["<VirtualHost *:80> \n"
 	"# match this virtual host. For the default virtual host (this file) this \n"
 	"# value is not decisive as it is used as a last resort host regardless. \n"
 	"# However, you must set it for any further virtual host explicitly. \n"
-	"#ServerName www.example.com \n"
+	"#ServerName "+nombreweb+" \n"
 
 	"ServerAdmin webmaster@localhost \n"
-	"DocumentRoot /var/www/html \n"
+	"DocumentRoot /var/www/"+nombreweb+" \n"
 
 	"# Available loglevels: trace8, ..., trace1, debug, info, notice, warn, \n"
 	"# error, crit, alert, emerg. \n"
@@ -22,8 +23,8 @@ virtualhost=["<VirtualHost *:80> \n"
 	"# modules, e.g. \n"
 	"#LogLevel info ssl:warn \n"
 
-	"ErrorLog ${APACHE_LOG_DIR}/error.log \n"
-	"CustomLog ${APACHE_LOG_DIR}/access.log combined \n"
+	"ErrorLog ${APACHE_LOG_DIR}/"+nombreweb+"/error.log \n"
+	"CustomLog ${APACHE_LOG_DIR}/"+nombreweb"/access.log combined \n"
 
 	"# For most configuration files from conf-available/, which are \n"
 	"# enabled or disabled at a global level, it is possible to \n"
