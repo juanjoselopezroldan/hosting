@@ -40,6 +40,7 @@ if opcion == '-a':
     os.system("chown www-data. /var/www/"+nombreweb)
     os.system("mkdir /var/log/apache2/"+nombreweb)
     os.system("touch /var/log/apache2/"+nombreweb+"/error.log")
+    os.system("touch /var/log/apache2/"+nombreweb+"/access.log")
 
 
 elif opcion == '-b':
