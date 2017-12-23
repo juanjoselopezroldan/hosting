@@ -48,6 +48,7 @@ if opcion == '-a':
 	os.system("a2ensite "+usuario+".conf")
 	os.system("touch /srv/ftp/"+usuario+"/index.html")
 	os.system("echo 'Sitio Creado Correctamente' > /srv/ftp/"+usuario+"/index.html")
+
 elif opcion == '-b':
 	os.system("a2dissite "+usuario+".conf")
 	os.system("rm -rf /var/log/apache2/"+usuario)
