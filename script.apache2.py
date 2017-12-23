@@ -41,6 +41,9 @@ if opcion == '-a':
     os.system("mkdir /var/log/apache2/"+nombreweb)
     os.system("touch /var/log/apache2/"+nombreweb+"/error.log")
     os.system("touch /var/log/apache2/"+nombreweb+"/access.log")
-
+	os.system("touch /etc/apache2/sites-available/"+nombreweb+".conf")
+	datos=open('/etc/apache2/sites-available/'+nombreweb+'.conf',"a")
+	datos.writelines(virtualhost)
+	datos.close()
 
 elif opcion == '-b':
