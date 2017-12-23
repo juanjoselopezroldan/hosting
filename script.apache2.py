@@ -2,7 +2,8 @@
 import sys, os
 
 opcion=sys.argv[1]
-nombreweb=sys.argv[2]
+usuario=sys.argv[2]
+nombreweb=sys.argv[3]
 
 virtualhost=["<VirtualHost *:80> \n",
 	"# The ServerName directive sets the request scheme, hostname and port that \n",
