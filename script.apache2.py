@@ -52,7 +52,7 @@ if opcion == '-a':
 elif opcion == '-b':
 	os.system("a2dissite "+usuario+".conf")
 	os.system("rm -rf /var/log/apache2/"+usuario)
-	os.system("rm /etc/apache2/sites-available/"+usuario+".conf")
+	os.system("rm -rf /etc/apache2/sites-available/"+usuario+".conf")
 	os.system("rm -rf /srv/ftp/"+usuario)
 
 os.system("service apache2 restart")
