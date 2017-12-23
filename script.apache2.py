@@ -47,8 +47,14 @@ if opcion == '-a':
 	datos.close()
 	os.system("a2ensite "+usuario+".conf")
 	os.system("service apache2 restart")
+	os.system("service proftpd restart")
 elif opcion == '-b':
 	os.system("a2dissite "+usuario+".conf")
 	os.system("rm -rf /var/log/apache2/"+usuario)
 	os.system("rm /etc/apache2/sites-available/"+usuario+".conf")
 	os.system("rm -rf /srv/ftp/"+usuario)
+	os.system("service apache2 restart")
+	os.system("service proftpd restart")
+
+os.system("touch /srv/ftp/"+usuario+"/index.html")
+os.system("echo 'Sitio Creado Correctamente' > /srv/ftp/"+usuario+"/index.html")
