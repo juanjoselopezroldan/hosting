@@ -16,7 +16,7 @@ virtualhost=["<VirtualHost *:80> \n",
 	"#ServerName "+nombreweb+" \n",
 
 	"ServerAdmin webmaster@localhost \n",
-	"DocumentRoot /var/www/"+nombreweb+" \n",
+	"DocumentRoot /srv/ftp/"+usuario+" \n",
 
 	"# Available loglevels: trace8, ..., trace1, debug, info, notice, warn, \n",
 	"# error, crit, alert, emerg. \n",
