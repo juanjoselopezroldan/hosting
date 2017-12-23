@@ -3,7 +3,6 @@ import sys, os
 
 opcion=sys.argv[1]
 usuario=sys.argv[2]
-nombreweb=sys.argv[3]
 
 virtualhost=["<VirtualHost *:80> \n",
 	"# The ServerName directive sets the request scheme, hostname and port that \n",
@@ -13,7 +12,7 @@ virtualhost=["<VirtualHost *:80> \n",
 	"# match this virtual host. For the default virtual host (this file) this \n",
 	"# value is not decisive as it is used as a last resort host regardless. \n",
 	"# However, you must set it for any further virtual host explicitly. \n",
-	"ServerName "+nombreweb+" \n",
+	"ServerName "+usuario+" \n",
 
 	"ServerAdmin webmaster@localhost \n",
 	"DocumentRoot /srv/ftp/"+usuario+" \n",
@@ -24,8 +23,8 @@ virtualhost=["<VirtualHost *:80> \n",
 	"# modules, e.g. \n",
 	"#LogLevel info ssl:warn \n",
 
-	"ErrorLog ${APACHE_LOG_DIR}/"+nombreweb+"/error.log \n",
-	"CustomLog ${APACHE_LOG_DIR}/"+nombreweb"/access.log combined \n",
+	"ErrorLog ${APACHE_LOG_DIR}/"+usuario+"/error.log \n",
+	"CustomLog ${APACHE_LOG_DIR}/"+usuario"/access.log combined \n",
 
 	"# For most configuration files from conf-available/, which are \n",
 	"# enabled or disabled at a global level, it is possible to \n",
@@ -38,11 +37,11 @@ virtualhost=["<VirtualHost *:80> \n",
 
 if opcion == '-a':
     os.system("chown www-data. /srv/ftp/"+usuario)
-    os.system("mkdir /var/log/apache2/"+nombreweb)
-    os.system("touch /var/log/apache2/"+nombreweb+"/error.log")
-    os.system("touch /var/log/apache2/"+nombreweb+"/access.log")
-	os.system("touch /etc/apache2/sites-available/"+nombreweb+".conf")
-	datos=open('/etc/apache2/sites-available/'+nombreweb+'.conf',"a")
+    os.system("mkdir /var/log/apache2/"+usuario)
+    os.system("touch /var/log/apache2/"+usuario+"/error.log")
+    os.system("touch /var/log/apache2/"+usuario+"/access.log")
+	os.system("touch /etc/apache2/sites-available/"+usuario+".conf")
+	datos=open('/etc/apache2/sites-available/'+usuario+'.conf',"a")
 	datos.writelines(virtualhost)
 	datos.close()
 
