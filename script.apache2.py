@@ -45,5 +45,10 @@ if opcion == '-a':
 	datos=open('/etc/apache2/sites-available/'+usuario+'.conf',"a")
 	datos.writelines(virtualhost)
 	datos.close()
-
+	os.system("a2ensite "+usuario+".conf")
+	os.system("service apache2 restart")
 elif opcion == '-b':
+	os.system("a2dissite "+usuario+".conf")
+	os.system("rm -rf /var/log/apache2/"+usuario)
+	os.system("rm /etc/apache2/sites-available/"+usuario+".conf")
+	os.system()
