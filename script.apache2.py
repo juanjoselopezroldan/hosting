@@ -12,7 +12,7 @@ virtualhost=["<VirtualHost *:80> \n",
 	"# match this virtual host. For the default virtual host (this file) this \n",
 	"# value is not decisive as it is used as a last resort host regardless. \n",
 	"# However, you must set it for any further virtual host explicitly. \n",
-	"ServerName "+usuario+" \n",
+	"ServerName "+usuario+".elultimohosting.com \n",
 
 	"ServerAdmin webmaster@localhost \n",
 	"DocumentRoot /srv/ftp/"+usuario+" \n",
