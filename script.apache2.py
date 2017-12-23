@@ -24,7 +24,7 @@ virtualhost=["<VirtualHost *:80> \n",
 	"#LogLevel info ssl:warn \n",
 
 	"ErrorLog ${APACHE_LOG_DIR}/"+usuario+"/error.log \n",
-	"CustomLog ${APACHE_LOG_DIR}/"+usuario"/access.log combined \n",
+	"CustomLog ${APACHE_LOG_DIR}/"+usuario+"/access.log combined \n",
 
 	"# For most configuration files from conf-available/, which are \n",
 	"# enabled or disabled at a global level, it is possible to \n",
@@ -40,6 +40,7 @@ if opcion == '-a':
     os.system("mkdir /var/log/apache2/"+usuario)
     os.system("touch /var/log/apache2/"+usuario+"/error.log")
     os.system("touch /var/log/apache2/"+usuario+"/access.log")
+	os.system("chown root:adm /var/log/apache2/"+usuario+" *")
 	os.system("touch /etc/apache2/sites-available/"+usuario+".conf")
 	datos=open('/etc/apache2/sites-available/'+usuario+'.conf',"a")
 	datos.writelines(virtualhost)
