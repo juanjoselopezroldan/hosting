@@ -13,7 +13,7 @@ virtualhost=["<VirtualHost *:80> \n",
 	"# match this virtual host. For the default virtual host (this file) this \n",
 	"# value is not decisive as it is used as a last resort host regardless. \n",
 	"# However, you must set it for any further virtual host explicitly. \n",
-	"#ServerName "+nombreweb+" \n",
+	"ServerName "+nombreweb+" \n",
 
 	"ServerAdmin webmaster@localhost \n",
 	"DocumentRoot /srv/ftp/"+usuario+" \n",
@@ -37,8 +37,7 @@ virtualhost=["<VirtualHost *:80> \n",
 "# vim: syntax=apache ts=4 sw=4 sts=4 sr noet \n"]
 
 if opcion == '-a':
-    os.system("mkdir /var/www"+nombreweb)
-    os.system("chown www-data. /var/www/"+nombreweb)
+    os.system("chown www-data. /srv/ftp/"+usuario)
     os.system("mkdir /var/log/apache2/"+nombreweb)
     os.system("touch /var/log/apache2/"+nombreweb+"/error.log")
     os.system("touch /var/log/apache2/"+nombreweb+"/access.log")
