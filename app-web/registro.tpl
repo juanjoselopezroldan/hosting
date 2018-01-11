@@ -16,7 +16,7 @@
                 <select class="" name="tipo">
                   <option selected value="0"> Elige una opción </option>
                   <option value="1">FTP</option>
-                  <option value="3">GitHub</option>
+                  <option value="2">GitHub</option>
                 </select>
                 <br>
                 <input type="submit" value="registrar">
